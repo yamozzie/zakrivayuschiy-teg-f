@@ -17,4 +17,349 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  margin: 100px 0;
+  font-family: var(--main-font-family), sans-serif;
+  font-variation-settings: 'wght' var(--card-text-weight);
+  color: var(--main-color);
+  background: var(--background);
+  background-color: var(--bg-color);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content-section {
+  max-inline-size: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 100px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px 0;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  font-family: var(--accent-font-family);
+  text-transform: uppercase;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-block: -5px 20px;
+}
+
+.header-logo__title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: 65px;
+}
+
+.header-logo__description {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 23px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  margin-inline-start: 17px;
+}
+
+.theme-menu__button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: var(--main-color);
+  block-size: 3px;
+  inline-size: 100%;
+  inset-block-end: -3px;
+  inset-inline-start: 0px;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.theme-menu__button:disabled {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;  
+  animation: moving 0.5s infinite ease-in-out reverse;
+  inset-inline-start: -10px;
+
+}
+
+.main {
+  margin-block-start: 100px;
+}
+
+.main__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.main__card-list-item {
+  background-color: var(--bg-color);
+}
+
+.card-list__title {
+  padding: 4px 12px 6px;
+  font-size: 18px;
+  line-height: 21.78px;
+}
+
+.card {
+  border: 2px solid var(--main-color);
+  padding-bottom: 25px;
+  z-index: -5;
+}
+
+.card-image__container {
+  position: relative;
+}
+
+.card__image-text {
+  font-family: var(--accent-font-family);
+  position: absolute;
+  font-size: 14px;
+  line-height: 14px;
+  inset-inline-end: 10px;
+  inset-block-start: 20px;
+  color: var(--main-color);
+  opacity: 0.6;
+  text-shadow:
+  1px 0 0 var(--bg-color),
+  0 1px 0 var(--bg-color),
+  -1px 0 0 var(--bg-color),
+  0 -1px 0 var(--bg-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--bg-color)) or 
+  (-webkit-text-stroke: 1px var(--bg-color))
+) {
+  .card__image-text {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--bg-color);
+  }
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  inline-size: 100%;
+  border-bottom: 2px solid var(--main-color);
+  border-top: 2px solid var(--main-color);
+
+}
+
+.card__text {
+  padding: 25px 25px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.cards__button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding-inline-end: 25px;
+}
+
+/*анимации like-icon находятся в animations.css*/
+
+.contour {
+  fill: var(--heart-contour-color);
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+  
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card-icon__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card-icon__button:focus {
+  outline: none;
+}
+
+.card-icon__button:focus-visible {
+  transition: border 0.3s;
+  border: 2px solid var(--main-color);
+  /*тут нужно отредачить высоту и ширину сердечка*/
+}
+
+.card__like-button {
+  position: relative;
+  font-family: var(--accent-font-family);
+  background: none;
+  border: none;
+  padding: 9px 32px;
+  cursor: pointer;
+}
+
+.standard-button {
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  border: 2px solid var(--main-color);
+}
+
+.standard-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.standard-button:hover::before {
+  transform: scaleX(1);
+}
+
+.standard-button:focus {
+  outline: none;
+}
+
+.standard-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--main-color);
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  margin-block-start: 52px;
+}
+
+.footer__button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  background-color: var(--bg-color);
+}
+
+.footer__button-image {
+  width: 28px;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  font-family: var(--accent-font-family);
+  color: var(--button-text-color);
+  font-size: 14px;
+  line-height: 12.6px;
+  mix-blend-mode: difference;
+}
+
+dialog::backdrop {
+  opacity: 0.65;
+}
+
+.dialog {
+  background: var(--bg-color);
+  width: clamp(341px, 335.4348px + 1.7391vi, 357px);
+  min-width: 341px;
+  border: 2px solid var(--main-color);
+  padding: 30px;
+  inset-block-end: -8000px;
+}
+
+.dialog__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--main-color);
+}
+
+.dialog-image {
+  width: 60px;
+}
+
+.dialog__warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 38px;
+  background-color: transparent;
+  padding: 9px 17px;
+}
+
+@media (width >= 375px) {
+  .footer__button {
+    flex-direction: row;
+  }
 }
