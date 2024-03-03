@@ -357,6 +357,39 @@ dialog::backdrop {
   padding: 9px 17px;
 }
 
+.filter_brightness {
+  filter: brightness(140%);
+}
+
+.filter_contrast {
+  filter: contrast(150%);
+}
+
+.filter_blur {
+  filter: blur(0.3rem);
+}
+
+.filter_opacity {
+  filter: opacity(0.8);
+}
+
+.filter_grayscale {
+  filter: grayscale(0.7);
+}
+
+.filter_saturate {
+  filter: saturate(135%);
+}
+
+.filter_sepia {
+  filter: sepia(65%);
+}
+
+.filter_combinate {
+  filter: contrast(200%) blur(1.4px);
+}
+
+
 @media (width >= 375px) {
   .footer__button {
     flex-direction: row;
