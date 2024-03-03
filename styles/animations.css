@@ -45,6 +45,24 @@
   }
 }
 
+.contour {
+  fill: var(--heart-contour-color);
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+  
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
 .like-icon:hover .core {
   fill: var(--heart-core-color);
   transition: fill 0.3s linear;
