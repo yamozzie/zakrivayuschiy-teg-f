@@ -169,6 +169,7 @@
   -1px 0 0 var(--bg-color),
   0 -1px 0 var(--bg-color);
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 
 @supports (
