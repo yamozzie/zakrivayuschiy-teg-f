@@ -13,7 +13,7 @@
   --heart-core-color: #000;
   --heart-body-color: #000;
   --heart-fill: #f00;
-  --background: repeating-linear-gradient( #d3d3d3 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
-  repeating-linear-gradient(90deg, #e7e7e7 0px 2px, #1a1a1a 2px 4px),
+  --background: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
+  repeating-linear-gradient(180deg, #d3d3d3 0px 2px, rgba(0,0,0,0) 2px 4px),
   linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
 }

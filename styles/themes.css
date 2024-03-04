@@ -12,11 +12,10 @@
   --text-stroke-color: #fff;
   --button-text-color: #fff;
   --heart-contour-color: #000;
-  --sparks-color: #f00;
   --heart-core-color: #000;
   --heart-body-color: #000;
-  --background: repeating-linear-gradient( #d3d3d3 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
-  repeating-linear-gradient(90deg, #e7e7e7 0px 2px, #1a1a1a 2px 4px),
+  --background: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
+  repeating-linear-gradient(180deg, #d3d3d3 0px 2px, rgba(0,0,0,0) 2px 4px),
   linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
 }
 
@@ -29,11 +28,10 @@
     --text-stroke-color: #fff;
     --button-text-color: #fff;
     --heart-contour-color: #000;
-    --sparks-color: #f00;
     --heart-core-color: #000;
     --heart-body-color: #000;
-    --background: repeating-linear-gradient( #d3d3d3 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
-    repeating-linear-gradient(90deg, #e7e7e7 0px 2px, #1a1a1a 2px 4px),
+    --background: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0px 2px, rgba(0,0,0,0) 2px 4px),
     linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
   }
 }
@@ -46,11 +44,10 @@
   --text-stroke-color: #000;
   --button-text-color: #00cc14;
   --heart-contour-color: #00cc14;
-  --sparks-color: #f00;
   --heart-core-color: #00cc14;
   --heart-body-color: #00cc14;
-  --background: repeating-linear-gradient( #000 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
-  repeating-linear-gradient(90deg, #007f0c 0px 2px, #004306 2px 4px),
+  --background: repeating-linear-gradient(90deg, #000 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
+  repeating-linear-gradient(180deg, #000 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
   linear-gradient(180deg, #007f0c 0%, #004306 100%);
 }
 
@@ -63,11 +60,10 @@
     --text-stroke-color: #000;
     --button-text-color: #00cc14;
     --heart-contour-color: #00cc14;
-    --sparks-color: #f00;
     --heart-core-color: #00cc14;
     --heart-body-color: #00cc14;
-    --background: repeating-linear-gradient( #000 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
-    repeating-linear-gradient(90deg, #007f0c 0px 2px, #004306 2px 4px),
+    --background: repeating-linear-gradient(90deg, #000 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
+    repeating-linear-gradient(180deg, #000 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
     linear-gradient(180deg, #007f0c 0%, #004306 100%);
   }
 }

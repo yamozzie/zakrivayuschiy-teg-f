@@ -38,7 +38,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto 100px;
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px 0;
+  padding: 110px 0 25px 0;
   background-color: var(--bg-color);
   border: 2px solid var(--main-color);
   font-family: var(--accent-font-family), sans-serif;
@@ -48,7 +48,7 @@
 .header-logo {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
   margin-block: 0px 20px;
 }
@@ -209,20 +209,19 @@
 
 /*анимации like-icon находятся в animations.css*/
 
-.card-icon__button {
+.card__icon-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.card-icon__button:focus {
+.card__icon-button:focus {
   outline: none;
 }
 
-.card-icon__button:focus-visible {
+.card__icon-button:focus-visible {
   transition: border 0.3s;
   border: 2px solid var(--main-color);
-  /*тут нужно отредачить высоту и ширину сердечка*/
 }
 
 .card__like-button {
@@ -230,8 +229,9 @@
   font-family: var(--accent-font-family);
   background: none;
   border: none;
-  padding: 9px 32px;
+  padding: 9px 0;
   cursor: pointer;
+  inline-size: 130px;
 }
 
 .standard-button {
@@ -296,6 +296,7 @@
 
 dialog::backdrop {
   opacity: 0.75;
+  background-color: #000;
 }
 
 .dialog {
@@ -304,7 +305,6 @@ dialog::backdrop {
   min-width: 341px;
   border: 2px solid var(--main-color);
   padding: 30px;
-  inset-block-end: -8000px;
 }
 
 .dialog__container {
@@ -373,8 +373,20 @@ dialog::backdrop {
 }
 
 
-@media (width >= 375px) {
+@media (width > 375px) {
+  .header {
+    padding: 136px 0 25px 0;
+  }
+
+  .header-logo {
+    gap: 20px;
+  }
+
   .footer__button {
     flex-direction: row;
+  }
+
+  .footer__button-image {
+    width: 21px;
   }
 }
