@@ -156,7 +156,7 @@
   font-size: 14px;
   line-height: 14px;
   inset-inline-end: 10px;
-  inset-block-start: 20px;
+  inset-block-start: 25px;
   color: var(--main-color);
   opacity: 0.5;
   text-shadow:
@@ -383,6 +383,10 @@ dialog::backdrop {
 
   .theme-menu__list {
     margin-block-start: 5px;
+  }
+
+  .card__image-text {
+    inset-inline-end: 25px;
   }
 
   .footer__button {
